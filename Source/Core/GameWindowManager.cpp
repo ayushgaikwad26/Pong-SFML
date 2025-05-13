@@ -24,11 +24,13 @@ namespace Core
         return game_window->isOpen();
     }
 
-    void GameWindowManager::render()
+    void GameWindowManager::clearGameWindow()
     {
         game_window->clear();
+    }
 
-
-        game_window->display();
+    void GameWindowManager::displayGameWindow()
+    {
+        return game_window->display();
     }
 }
