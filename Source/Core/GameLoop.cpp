@@ -6,13 +6,14 @@ namespace Core
 	{
 		game_window_manager = new GameWindowManager();
 		event_manager = new EventManager();
+		gameplay_manager = new GameplayManager();
 
 		game_window_manager->initialize();
 	}
 
 	bool GameLoop::isGameRunning()
 	{
-		return game_window_manager->isGameRunning();
+		return game_window_manager->isGameOpen();
 	}
 
 	void GameLoop::pollEvent()
@@ -20,13 +21,15 @@ namespace Core
 		event_manager->pollEvents(game_window_manager->getGameWindow());
 	}
 
-	void GameLoop::update() {}
+	void GameLoop::update()
+	{
+		gameplay_manager->update();
+	}
 
 	void GameLoop::render()
 	{
 		game_window_manager->clearGameWindow();
-
-
+		gameplay_manager->render(game_window_manager->getGameWindow());
 		game_window_manager->displayGameWindow();
 	}
 }

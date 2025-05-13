@@ -137,11 +137,17 @@
     <ClCompile Include="Source\Core\GameLoop.cpp" />
     <ClCompile Include="Source\Core\GameWindowManager.cpp" />
     <ClCompile Include="Source\Event\EventManager.cpp" />
+    <ClCompile Include="Source\GamePlay\Ball\Ball.cpp" />
+    <ClCompile Include="Source\GamePlay\GameplayManager.cpp" />
+    <ClCompile Include="Source\GamePlay\Paddle\Paddle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Core\GameLoop.h" />
     <ClInclude Include="Header\Core\GameWindowManager.h" />
     <ClInclude Include="Header\Event\EventManager.h" />
+    <ClInclude Include="Header\GamePlay\Ball\Ball.h" />
+    <ClInclude Include="Header\GamePlay\GameplayManager.h" />
+    <ClInclude Include="Header\GamePlay\Paddle\Paddle.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
